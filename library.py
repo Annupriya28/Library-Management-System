@@ -1,66 +1,12 @@
-
-
-"""import mysql.connector
-
-conn = mysql.connector.connect(
-    host="127.0.0.1",  # Corrected, "127.0.0.1" as a string
-    user="root",
-    password ="admin@2025",
-    database="library_management"
-)
-
-
-# Check connection
-if conn.is_connected():
-    print("Connected to MySQL Database")
-cursor = conn.cursor()
-
-def add_book():
-    title = input("Enter book title: ")
-    author = input("Enter book author: ")
-    year = input("Enter book year: ")
-
-    cursor.execute("INSERT INTO books (title, author, year) VALUES (%s, %s, %s)", (title, author, year))
-    conn.commit()
-    print("✅ Book added successfully!")
-
-
-def view_books():
-    cursor.execute("SELECT * FROM books")
-    books = cursor.fetchall()
-
-    for book in books:
-        print(f"ID: {book[0]}, Title: {book[1]}, Author: {book[2]}, Year: {book[3]}")
-
-while True:
-    print("\nLibrary Management System")
-    print("1. Add Book")
-    print("2. View Books")
-    print("3. Exit")
-
-    choice = input("Enter choice: ")
-
-    if choice == "1":
-        add_book()
-    elif choice == "2":
-        view_books()
-    elif choice == "3":
-        print("Exiting...")
-        break
-    else:
-        print("❌ Invalid choice. Try again.")
-"""
-
-
 import tkinter as tk
 from tkinter import messagebox
 import mysql.connector
 
 # Connect to MySQL Database
 conn = mysql.connector.connect(
-    host="127.0.0.1",
-    user="root",  # Change this if you have a different username
-    password="admin@2025",  # Replace with your MySQL password
+    host="000.0.0.0",
+    user="abc",  # Change this if you have a different username
+    password="xxxxxxx",  # Replace with your MySQL password
     database="library_management"
 )
 cursor = conn.cursor()
